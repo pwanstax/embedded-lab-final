@@ -100,7 +100,7 @@ const MainPage = () => {
         <div></div>
       ) : (
         <div>
-          <div className="grid grid-cols-3 gap-10 p-10 h-full sm:h-screen font-mono content-center">
+          <div className="grid grid-cols-3 gap-10 p-10 h-full font-mono content-center">
             <div className={customModeHeadline}>
               <button onClick={handleChangeMode} className="text-left">
                 WELCOME TO OUR QUEUE GENERATOR
