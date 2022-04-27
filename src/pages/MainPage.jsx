@@ -22,12 +22,19 @@ const MainPage = () => {
   const handleChangeMode = () => {
     mode === "user" ? setShowModal(true) : setMode("user");
   };
+  const remainCalculate = (oldQueue) => {
+    var newQueue = oldQueue;
+    for (let index = 0; index < oldQueue.length; index++) {
+      newQueue[index].remain = index + 1;
+    }
+    setAllQueue(newQueue);
+  };
   const handleNextQueue = () => {
     const nextQueue = allQueue[0];
     setQueue(nextQueue.queue);
     setStatus(nextQueue.status);
     const newQueue = allQueue.filter((each) => each.queue !== nextQueue.queue);
-    setAllQueue(newQueue);
+    remainCalculate(newQueue);
   };
   const handleDelete = (queue) => {
     var trigger = true;
@@ -39,9 +46,19 @@ const MainPage = () => {
       }
       return each.queue !== queue;
     });
-    setAllQueue(newQueue);
+    remainCalculate(newQueue);
   };
 
+  const handleFocus = (queue) => {
+    for (let index = 0; index < allQueue.length; index++) {
+      if (allQueue[index].queue === parseInt(queue)) {
+        setFocusQueue(allQueue[index].queue);
+        setRemainQueue(allQueue[index].remain);
+        setWaitTime(allQueue[index].time);
+        break;
+      }
+    }
+  };
   const handleJump = (queue) => {
     const newQueue = allQueue.filter((each) => {
       if (each.queue === queue) {
@@ -50,7 +67,7 @@ const MainPage = () => {
       }
       return each.queue !== queue;
     });
-    setAllQueue(newQueue);
+    remainCalculate(newQueue);
   };
 
   const customModeStyle =
@@ -67,7 +84,7 @@ const MainPage = () => {
       try {
         // const res = await axios.get("/");
         const res = DATA_IN_TABLE;
-        setAllQueue(res);
+        remainCalculate(res);
       } catch (err) {
         console.error(err);
       } finally {
@@ -99,13 +116,7 @@ const MainPage = () => {
                 />
               </div>
               <div className="md:container mt-10 flex justify-center border-2 rounded-lg md:mx-auto ">
-                <QueueTable
-                  allQueue={allQueue}
-                  setAllQueue={setAllQueue}
-                  setFocusQueue={setFocusQueue}
-                  setRemainQueue={setRemainQueue}
-                  setWaitTime={setWaitTime}
-                />
+                <QueueTable allQueue={allQueue} handleFocus={handleFocus} />
               </div>
             </div>
             {mode === "admin" ? (
