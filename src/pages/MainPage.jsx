@@ -76,7 +76,7 @@ const MainPage = () => {
       : "md:container col-span-3 md:col-span-3 md:mx-auto ";
   const customModeHeadline =
     mode === "admin"
-      ? "md:container col-span-3 flex justify-center text-xl md:text-7xl box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 px-20 py-10 rounded-lg "
+      ? "md:container col-span-3 flex justify-center text-xl text-white md:text-7xl box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 px-20 py-10 rounded-lg "
       : "md:container col-span-3 border-b-4 text-xl md:text-7xl px-20 py-10";
 
   useEffect(() => {
