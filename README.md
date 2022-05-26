@@ -1,3 +1,21 @@
+This web application is used for queue handling. (using Tailwind CSS)
+
+![Screen Shot 2565-05-24 at 23 53 54 (2)](https://user-images.githubusercontent.com/70096049/170091425-dcab5b84-d28f-4799-a646-d6a107fdf390.png)
+
+Below is user mode. (for monitoring only)
+
+![Screen Shot 2565-05-24 at 23 55 17 (2)](https://user-images.githubusercontent.com/70096049/170091461-663a7662-a809-45ba-b4e6-918b5a0b5376.png)
+
+Below is admin mode. (can jump queue, delete and skip queue)
+
+![Screen Shot 2565-05-24 at 23 55 22 (2)](https://user-images.githubusercontent.com/70096049/170091482-ac08c2f5-2886-4ce8-82f9-fcfe6db3f450.png)
+
+![Screen Shot 2565-05-24 at 23 57 32 (2)](https://user-images.githubusercontent.com/70096049/170091492-d269ab29-eefa-477e-aee1-81857378cfff.png)
+
+![Screen Shot 2565-05-24 at 23 57 37 (2)](https://user-images.githubusercontent.com/70096049/170091502-b1c76828-c8b9-49bf-8726-c9577fc25655.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
