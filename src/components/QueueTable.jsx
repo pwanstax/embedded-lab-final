@@ -6,12 +6,16 @@ const QueueTable = ({allQueue, handleFocus}) => {
       <thead>
         <tr>
           <th className="border-2 p-2 bg-gray-200">#</th>
-          <th className="border-2 p-2 bg-gray-200">Waiting Time</th>
+          <th className="border-2 p-2 bg-gray-200">Time</th>
         </tr>
       </thead>
       <tbody>
         {allQueue.map((each) => (
-          <tr key={each.id} onClick={(e) => handleFocus(e.target.id)}>
+          <tr
+            key={each.id}
+            className="hover:bg-gray-50 hover:cursor-pointer"
+            onClick={(e) => handleFocus(e.target.id)}
+          >
             <td id={each.queue} className="border-2 border-l-0 p-2 border-b-0">
               {each.queue}
             </td>

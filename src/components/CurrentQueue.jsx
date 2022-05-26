@@ -4,7 +4,7 @@ const CurrentQueue = ({currentQueue, status, handleNextQueue, mode}) => {
   const customGrid =
     mode === "admin" ? "grid grid-rows-5 h-full" : "grid grid-rows-4 h-full";
   return (
-    <div className="md:container max-w-full h-64 text-center border-2 bg-gray-200 p-4 rounded-lg">
+    <div className="md:container  max-w-full h-64 text-center border-2 bg-gray-200 p-4 rounded-lg">
       <div className={customGrid}>
         <div className="row-span-1  container m-auto">Current Queue</div>
         <div className="row-span-2  container m-auto text-7xl">
